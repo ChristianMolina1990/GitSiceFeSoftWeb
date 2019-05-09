@@ -1,0 +1,169 @@
+﻿@*
+    <div class="jumbotron">
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+            a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+            is an ideal platform for building RESTful applications on the .NET Framework.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        </div>
+    </div>
+*@
+
+
+
+
+<div class="jumbotron">
+    @*<form role="form" id="myForm" method="post" action="consultaFile" novalidate="novalidate">*@
+    <form role="form" id="myForm" method="post" action="index" novalidate="novalidate">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="page-header">
+                    <h1>Consulta de Documentos</h1>
+                    <p class="lead">Por favor rellene los campos con la información solicitada y el email donde desea recibir los archivos electrónicos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="selTpdEmi" class="control-label">Documento del Emisor (*) :</label>
+                    <select id="selTpdEmi" name="selTpdEmi" class="form-control input-sm" value="" aria-invalid="false">
+                        <option value="0">Doc. Trib. No Dom. Sin RUC</option>
+                        <option value="1">Doc. Nacional de Identidad</option>
+                        <option value="4">Carnet de Extranjeria</option>
+                        <option value="6" selected="selected">Reg. Unico de Contribuyente</option>
+                        <option value="7">Pasaporte</option>
+                        <option value="A">Ced. Diplomatica de Identidad</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="txtDctoEmi"></label>
+                    <input id="txtDctoEmi" name="txtDctoEmi" type="text" class="form-control" placeholder="Nro Documento (*)" value="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="selTpdRec" class="control-label">Documento del Receptor (*) </label>
+                    <select id="selTpdRec" name="selTpdRec" class="form-control input-sm" onchange="selTpdRecCmb(this)" value="" aria-invalid="false">
+                        <option value="0">Doc. Trib. No Dom. Sin RUC</option>
+                        <option value="1">Doc. Nacional de Identidad</option>
+                        <option value="4">Carnet de Extranjeria</option>
+                        <option value="6" selected="selected">Reg. Unico de Contribuyente</option>
+                        <option value="7">Pasaporte</option>
+                        <option value="A">Ced. Diplomatica de Identidad</option>
+                        <option value="-">Ninguno</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="txtDctoRec"></label>
+                    <input id="txtDctoRec" name="txtDctoRec" type="text" class="form-control" placeholder="Nro Documento (*)" value="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="tipoComprobante" class="control-label">Tipo Comprobante: (*) </label>
+                    <select id="tipoComprobante" name="tipoComprobante" class="form-control input-sm" onchange="selTipCmp(this)" value="" aria-invalid="false">
+                        <option value="01" selected="selected">FACTURA</option>
+                        <option value="03">BOLETA DE VENTA</option>
+                        <option value="07">NOTA DE CREDITO</option>
+                        <option value="08">NOTA DE DEBITO</option>
+                        <option value="20">COMPROBANTES DE RETENCIÓN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="txtSerie" class="control-label">N° Serie</label>
+                    <input id="txtSerie" name="txtSerie" type="text" class="form-control" placeholder="Nro Serie (*)" maxlength="4" value="">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="txtDocumento" class="control-label">N° Documento (*)</label>
+                    <input id="txtDocumento" name="txtDocumento" type="text" class="form-control" placeholder="Nro Documento (*)" maxlength="8" value="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label id="lblCmpCtrl" for="txtCmpCtrl" class="control-label">Importe total del documento (*) </label>
+                    <input id="txtCmpCtrl" name="txtCmpCtrl" type="text" class="form-control input-sm" placeholder="Importe total del documento (*)" value="">
+
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label id="lblEmail" for="txtEmail" class="control-label">Email (*)</label>
+                    <input id="txtEmail" name="txtEmail" type="text" class="form-control input-sm" placeholder="Email (*)" value="">
+
+                </div>
+            </div>
+            @*
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label id="lblCmpEmail" for="txtCmpEmail" class="control-label">Email</label>
+                <input id="txtCmpEmail" name="txtCmpEmail" type="text" class="form-control input-sm" placeholder="Email" value="">
+
+            </div>
+        </div>
+            *@
+            @*<div class="col-sm-3">
+            <div class="form-group">
+                <label for="txtCaptcha" class="control-label">Captcha</label>
+                <div class="input-group">
+                    <input id="txtCaptcha" name="txtCaptcha" type="text" class="form-control input-sm" placeholder="Captcha" value="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-sm" id="btnBusNroOrden" type="button" onclick="refresh()"><span class="glyphicon glyphicon-refresh"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <center><img id="scrCaptcha" src="/Doctel/MyCaptcha?1546564227160"></center>
+            </div>
+        </div>*@
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <input class="btn btn-primary col-xs-12 col-sm-8" id="sendValidate" name="send" type="submit" value="Solicitar Documentos SUNAT">
+            </div>
+        </div>
+        @*<div class="row">
+                <div class="col-sm-4">
+                    <input class="btn btn-default col-xs-12 col-sm-4" id="sendXml" name="send" type="submit" value="XML">
+                </div>
+                <div class="col-sm-4">
+                    <input class="btn btn-default col-xs-12 col-sm-4" id="sendPdf" name="send" type="submit" value="PDF">
+                </div>
+                <div class="col-sm-4">
+                    <input class="btn btn-default col-xs-12 col-sm-4" id="sendCdr" name="send" type="submit" value="CDR">
+                </div>
+            </div>*@
+    </form>
+</div>

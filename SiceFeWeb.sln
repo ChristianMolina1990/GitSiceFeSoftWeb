@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.SiceFeWebDB", "1.SiceFeWebDB", "{56E984D3-94DA-4643-8F12-4B9624E5D1DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiceFeWebDB", "SiceFeWebDB\SiceFeWebDB.csproj", "{009BC6B3-65B1-4048-B6D6-AB5A0DD64493}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Model", "2.Model", "{1681A252-49BE-401E-A408-21F01947C7D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiceFeWebModel", "SiceFeWebModel\SiceFeWebModel.csproj", "{BB9C96D7-A0FB-4D01-B9A4-412E63A04443}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Web", "3.Web", "{1247A395-A97D-46BB-8451-F74ED95147D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiceFeWeb", "SiceFeWeb\SiceFeWeb.csproj", "{BE90A0A3-44F6-451C-A01E-159D14AAC6ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{009BC6B3-65B1-4048-B6D6-AB5A0DD64493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009BC6B3-65B1-4048-B6D6-AB5A0DD64493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009BC6B3-65B1-4048-B6D6-AB5A0DD64493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009BC6B3-65B1-4048-B6D6-AB5A0DD64493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9C96D7-A0FB-4D01-B9A4-412E63A04443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9C96D7-A0FB-4D01-B9A4-412E63A04443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9C96D7-A0FB-4D01-B9A4-412E63A04443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9C96D7-A0FB-4D01-B9A4-412E63A04443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE90A0A3-44F6-451C-A01E-159D14AAC6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE90A0A3-44F6-451C-A01E-159D14AAC6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE90A0A3-44F6-451C-A01E-159D14AAC6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE90A0A3-44F6-451C-A01E-159D14AAC6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{009BC6B3-65B1-4048-B6D6-AB5A0DD64493} = {56E984D3-94DA-4643-8F12-4B9624E5D1DC}
+		{BB9C96D7-A0FB-4D01-B9A4-412E63A04443} = {1681A252-49BE-401E-A408-21F01947C7D7}
+		{BE90A0A3-44F6-451C-A01E-159D14AAC6ED} = {1247A395-A97D-46BB-8451-F74ED95147D6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26D3D0D9-3366-4ECD-8EAC-ACB1B6629EAE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sicefesoft.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SiceFeWeb\\SiceFeWeb.csproj
+		SccProjectTopLevelParentUniqueName1 = SiceFeWeb.sln
+		SccProjectName1 = SiceFeWeb
+		SccLocalPath1 = SiceFeWeb
+		SccProjectUniqueName2 = SiceFeWebDB\\SiceFeWebDB.csproj
+		SccProjectTopLevelParentUniqueName2 = SiceFeWeb.sln
+		SccProjectName2 = SiceFeWebDB
+		SccLocalPath2 = SiceFeWebDB
+		SccProjectUniqueName3 = SiceFeWebModel\\SiceFeWebModel.csproj
+		SccProjectTopLevelParentUniqueName3 = SiceFeWeb.sln
+		SccProjectName3 = SiceFeWebModel
+		SccLocalPath3 = SiceFeWebModel
+	EndGlobalSection
+EndGlobal
